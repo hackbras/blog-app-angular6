@@ -5,15 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostService } from './services/post.service';
+import { HttpModule } from '@angular/http';
+import { AuthorComponent } from './author/author.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    AuthorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
